@@ -1,0 +1,179 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09-oct-2015, 23:33:50
+    Author     : carlii
+*/
+
+.encabezado{
+    height: 150px;
+    width: 20%;
+    background-color: #0B3861;
+    float: left;
+}
+.encabezado img{
+    height: 90px;
+    width: 90px;
+    margin-top: 30px;
+    margin-left:  120px;
+}
+.encabezadoCenter{
+    height: 150px;
+    width: 80%;
+    background-color: #0B3861;
+    float: left;
+}
+.encabezadoCenter h1{
+    color: white;
+    margin-left: 100px;
+    margin-top: 60px;
+    font-family: arial;
+}
+.hora{
+    width: 100%;
+    background-color: #0B3861;
+    float: left;
+}
+
+.main{
+    
+    height: 330px;
+    width: 1350px;
+    float: left;
+    background-color: white;
+}
+
+.main ul {
+    width:750px;
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+}
+.main li{
+    padding:12px; 
+   
+    position:relative;
+}
+.main label {
+    color: black;
+    float: left;
+    font-family: arial;
+    font-size: 10px;
+    width: 90px;
+}
+
+.main input { 
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+    color: #888;
+    font-size: 12px;
+    font-family: arial;
+    padding-right:30px;
+    -moz-transition: padding .25s; 
+    -webkit-transition: padding .25s; 
+    -o-transition: padding .25s;
+    transition: padding .25s;
+}
+.main input:focus {
+    background: #fff; 
+    border:1px solid #555; 
+    box-shadow: 0 0 3px #aaa; 
+    padding-right:80px;
+}
+.main input {
+    height:20px; 
+    width:220px; 
+    padding:5px 8px;
+}
+.main input:required:valid {
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+.main input:focus:invalid{
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+.main p{
+    font-family: arial;
+    font-size: 130%;
+}
+.main2 p{
+    font-family: arial;
+    font-size: 130%;
+}
+.main2 {
+    
+    height: 70px;
+    width: 1350px;
+    float: left;
+    background-color: white;
+}
+.menu-wrapper ul{
+    padding: 0;
+    list-style: none;
+}
+.hmenu li{
+    display: inline-block;
+  
+}
+.hmenu li a{
+    display: block;
+    padding: 10px 5px;
+    width: 90px;
+}
+li ul{
+    position: absolute;
+    display: none; // para desaparecer los submenu
+}
+//para hacer aparecer los submenu
+.sub-menu a{
+    display: block;
+    padding: 10px 5px;
+    width: 90px;
+}
+li:hover ul{
+    display: block;
+}
+.menu-wrapper, li ul{
+    background: #555;
+}
+.hmenu{
+    width: 412px;
+    margin: 0 auto;
+   
+}
+.hmenu a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: arial;
+    font-size: 13px;
+}
+.hmenu li:hover{
+    background: #a3cd39; // para que cambie el color de fondo al pasar el mouse
+    text-shadow: 0 0 2px #000; //sombra en el texto
+}
+.enUser{
+    width: 535px;
+    background-color: white;
+    float: left;
+}
+.enUser h3{
+    font-family: arial;
+    font-size: 13px;
+    color: black;
+}
+.enPerfil{
+    width: 815px;
+    background-color: white;
+    float: left;
+}
+.enPerfil h3{
+    font-family: arial;
+    font-size: 13px;
+    color: black;
+}

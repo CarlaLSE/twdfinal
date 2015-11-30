@@ -1,0 +1,119 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08-nov-2015, 14:11:06
+    Author     : carlii
+*/
+.encabezado{
+    height: 150px;
+    width: 20%;
+    background-color: #0B3861;
+    float: left;
+}
+.encabezado img{
+    height: 90px;
+    width: 90px;
+    margin-top: 30px;
+    margin-left:  120px;
+}
+.encabezadoCenter{
+    height: 150px;
+    width: 80%;
+    background-color: #0B3861;
+    float: left;
+}
+.encabezadoCenter h1{
+    color: white;
+    margin-left: 100px;
+    margin-top: 60px;
+    font-family: arial;
+}
+.hora{
+    width: 100%;
+    background-color: #0B3861;
+    float: left;
+}
+.main{
+    
+    height: 330px;
+    width: 100%;
+    float: left;
+    background-color:white;
+    margin-left: 20%;
+}
+
+.main ul {
+    width:750px;
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+}
+.main li{
+    padding:12px; 
+   
+    position:relative;
+}
+.main label {
+    color: black;
+    
+    font-family: arial;
+    font-size: 10px;
+    
+}
+
+.main input { 
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+    color: #888;
+    font-size: 12px;
+    font-family: arial;
+    padding-right:30px;
+    -moz-transition: padding .25s; 
+    -webkit-transition: padding .25s; 
+    -o-transition: padding .25s;
+    transition: padding .25s;
+}
+.main input:focus {
+    background: #fff; 
+    border:1px solid #555; 
+    box-shadow: 0 0 3px #aaa; 
+    padding-right:80px;
+}
+.main input {
+    height:20px; 
+    width:220px; 
+    padding:5px 8px;
+}
+.main input:required:valid {
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+    margin-right: 10%;
+}
+.main input:focus:invalid{
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+.main p{
+    font-family: arial;
+    font-size: 130%;
+}
+
+.select {
+  border: 1px solid #ccc;
+  width: 235px;
+  overflow: hidden;
+  background: #fff url("flecha.png") no-repeat 90% center;
+}
+  .select select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+   
+  }
