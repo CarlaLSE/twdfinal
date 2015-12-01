@@ -20,6 +20,11 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
+                <prop key="InicioLogin.htm">InicioLoginController</prop>
+                <prop key="PaginaVentas.htm">PaginaVentasController</prop>
+                <prop key="AltaProductos.htm">AltaProductosController</prop>
+                <prop key="Inventario.htm">InventarioController</prop>
+                <prop key="AltaCliente.htm">AltaClienteController</prop>
             </props>
         </property>
     </bean>
@@ -35,5 +40,21 @@
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
+    <bean name="InicioLoginController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="InicioLogin" />
 
+    <bean name="PaginaVentasController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="PaginaVentas" />
+    <bean name="AltaProductosController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="AltaProductos2" />
+    
+    <bean name="InventarioController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="Inventario" />
+    <bean name="AltaClienteController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="AltaCliente" />
 </beans>

@@ -20,7 +20,7 @@
         Puerto: 8080<br /> 
     </h3> <br><br> 
     <center> 
-        <a href="index_1.jsp">Entrar</a> 
+        <a href="InicioLogin.htm">Entrar</a> 
     </center> 
 </body> 
 </html>
