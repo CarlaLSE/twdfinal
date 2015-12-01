@@ -45,7 +45,7 @@ String consulta =   "INSERT INTO twproducto (descripcion, existencia, precio, st
 Conexiones.alta(consulta);
 out.println("<h2><center><br>Alta Registrada"); 
 out.println("<br><br><a href=Inventario.htm>Ver Productos</a><br><br>"); 
-out.println("<a href=AltaProductos2.jsp>Nuevo Producto</a><br><br>"); 
+out.println("<a href=AltaProductos.htm>Nuevo Producto</a><br><br>"); 
 } finally { 
 out.close(); 
 } 
