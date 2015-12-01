@@ -30,11 +30,6 @@ public class ListarCliente extends HttpServlet {
     static Statement sentencia = null;
     static ResultSet rs = null;
 
-    public ListarCliente() throws SQLException {
-        conexion = Conexiones.conexion;
-        sentencia = Conexiones.conexion.createStatement();
-    }
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -47,22 +42,51 @@ public class ListarCliente extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-
+//            Class.forName(" org.postgresql.Driver ").newInstance();
+//            JOptionPane.showMessageDialog(null, "No se pudo cargar el puente JDBC-ODBC.");
+//return; 
+            conexion = Conexiones.conexion;
+            Conexiones.conecta();
+            sentencia = Conexiones.conexion.createStatement();
+//            JOptionPane.showMessageDialog(null, "Conexion establecida");
+       
+//        try {
             String consulta = "select * from twcliente";
 
             rs = Conexiones.sentencia.executeQuery(consulta);
             while (rs.next()) {
+                out.println(rs.getString(1));
                 out.println(rs.getString(2));
                 out.println(rs.getString(3));
+                out.println(rs.getString(4));
+                out.println(rs.getString(5));
+                out.println(rs.getString(6));
+                out.println(rs.getString(7));
             }
+//            while (rs.next()) {
+//                out.println(rs.getString("nombrecl"));
+//                out.println(rs.getString("telcl"));
+//                out.println(rs.getString("emailcl"));
+//                out.println(rs.getString("rfccl"));
+//                out.println(rs.getString("direccioncl"));
+//                out.println(rs.getString("usuariocl"));
+//                out.println(rs.getString("contraseñacl"));
+//                out.println(rs.getString("statuscl"));
+//                out.println("<br><hr>");
+//            }
+
             out.println("<a href=AltaCliente.jsp>Agregar Nuevo Cliente</a>");
             rs.close();
             sentencia.close();
 
+//        } catch (Exception er) {
             rs.close();
             sentencia.close();
-        } catch (Exception er) {
 
+//            JOptionPane.showMessageDialog(null, "Error de conexion" + er);
+//        }
+ } catch (Exception er) {
+//JOptionPane.showMessageDialog(null,"Error de conexion" ); 
         }
     }
 

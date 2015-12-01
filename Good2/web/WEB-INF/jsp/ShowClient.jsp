@@ -4,13 +4,15 @@
     Author     : carlii
 --%>
 
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Inventario</title>
+        <title>Clientes</title>
         <link href="css/Estilo_Altac.css" rel="stylesheet">
     </head>
     <body>
@@ -60,7 +62,16 @@
             <td><p style="font-family: arial" ><b>Acción</b></p></td>
         </tr>
         <tr>
-            <td>IC001</td>
+            <%
+            dml.consultas consCliente = new dml.consultas();
+            ArrayList <Nodos.NCliente> LitCliente = consCliente.ShowCliente();
+            Iterator<Nodos.NCliente> iterador = LitCliente.iterator();
+            while (iterador.hasNext()) {
+                Nodos.NCliente dato = iterador.next();
+               out.println("<tr><td>"+dato.getIdcliente()+"</td><td>"+dato.getNombre()+"</td><td>"+dato.getTelefono()+"</td><td>"+dato.getEmail()+"</td><td>"+dato.getRfc()+"</td><td>"+dato.getDireccion()+"</td><td>"+dato.getUsuario()+"</td><td>"+dato.getContraseña()+"</td><td>"+dato.getStatus()+"</td><td><button>Actualizar</button><button>Editar</button></td></tr>");
+              
+            }
+            %>
             
             
             <%-- 
@@ -68,53 +79,13 @@
             String x=consPrueba.select();
             out.println("<td>"+x+"</td>");
             --%>
-             <td>Carla Lucero Sandoval Esquivel</td>
-             
-            <td>7221065206</td>
-            <td>mccl.ciscar@gmail.com</td>
-            <td>52740</td>
-            <td>Jaime Nuno Ocoyoacac</td>
+           
             <td><button>Actualizar</button>
                 <button>Editar</button>
 
             </td>
         </tr>
-        <tr>
-            <td>IC002</td>
-             <td>Carla Lucero Sandoval Esquivel</td>
-            <td>7221065206</td>
-            <td>mccl.ciscar@gmail.com</td>
-            <td>52740</td>
-            <td>Jaime Nuno Ocoyoacac</td>
-            <td><button>Actualizar</button>
-                <button>Editar</button>
-
-            </td>
-        </tr>
-        <tr>
-            <td>IC003</td>
-             <td>Carla Lucero Sandoval Esquivel</td>
-            <td>7221065206</td>
-            <td>mccl.ciscar@gmail.com</td>
-            <td>52740</td>
-            <td>Jaime Nuno Ocoyoacac</td>
-            <td><button>Actualizar</button>
-                <button>Editar</button>
-
-            </td>
-        </tr>
-        <tr>
-            <td>IC004</td>
-             <td>Carla Lucero Sandoval Esquivel</td>
-            <td>7221065206</td>
-            <td>mccl.ciscar@gmail.com</td>
-            <td>52740</td>
-            <td>Jaime Nuno Ocoyoacac</td>
-            <td><button>Actualizar</button>
-                <button>Editar</button>
-
-            </td>
-        </tr>
+       
     </table> 
 </body>
 </html>

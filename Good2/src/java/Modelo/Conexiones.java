@@ -31,7 +31,7 @@ public class Conexiones {
             return;
         }
         try {
-            conexion = DriverManager.getConnection("jdbc:postgresql://192.168.1.75/tdw_ventas", "postgres", "postgres");
+            conexion = DriverManager.getConnection("jdbc:postgresql://localhost/tdw_ventas", "postgres", "postgres");
             sentencia = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 //JOptionPane.showMessageDialog(null, "Conexión establecida"); 
         } catch (Exception er) {

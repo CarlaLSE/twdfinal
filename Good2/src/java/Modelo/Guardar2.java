@@ -53,7 +53,7 @@ catch(Exception e){
     System.out.println(e);
 }
 out.println("<h2><center><br>Alta Registrada"); 
-out.println("<br><br><a href=ListarCliente>Ver Clientes</a><br><br>"); 
+out.println("<br><br><a href=ShowClient.htm>Ver Clientes</a><br><br>"); 
 out.println("<a href=AltaCliente.jsp>Nuevo Ciente</a><br><br>"); 
 } finally { 
 out.close(); 

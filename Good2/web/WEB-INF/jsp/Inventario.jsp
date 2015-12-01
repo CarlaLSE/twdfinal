@@ -4,6 +4,8 @@
     Author     : carlii
 --%>
 
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -51,56 +53,25 @@
     <table style="width:100%">
         <tr>
             <td><p style="font-family: arial" ><b>Id del producto</b></p></td>
-            <td><p style="font-family: arial" ><b>Imagen</b></p></td>
-            <td><p style="font-family: arial" ><b>Descripción</b></p></td>
+            <td><p style="font-family: arial" ><b>Descripcion</b></p></td>
+            <td><p style="font-family: arial" ><b>Existencia</b></p></td>
             <td><p style="font-family: arial" ><b>Precio</b></p></td>
-            <td><p style="font-family: arial" ><b>Cantidad</b></p></td>
+            <td><p style="font-family: arial" ><b>Status</b></p></td>
             <td><p style="font-family: arial" ><b>Acción</b></p></td>
         </tr>
         <tr>
-            <td>IP001</td>
-             <td><img src="img/apelec.jpg" width="20%" height="20%"></td>
-            <td>Aparato electronico</td>
-            <td>$94</td>
-            <td>100</td>
-            <td><button>Actualizar</button>
-                <button>Editar</button>
-
-            </td>
+           <%
+            dml.consultas consProd = new dml.consultas();
+            ArrayList <Nodos.NProductos> LitProd = consProd.ShowInventario();
+            Iterator<Nodos.NProductos> iterador = LitProd.iterator();
+            while (iterador.hasNext()) {
+                Nodos.NProductos dato = iterador.next();
+               out.println("<tr><td>"+dato.getIdproducto()+"</td><td>"+dato.getNombre()+"</td><td>"+dato.getExistencia()+"</td><td>"+dato.getPrecio()+"</td><td>"+dato.getStatus()+"</td><td><button>Actualizar</button><button>Editar</button></td></tr>");
+              
+            }
+            %> 
         </tr>
-        <tr>
-            <td>IP002</td>
-            <td><img src="img/linB.jpg" width="20%" height="20%"></td>
-            <td>linea blanca</td>
-            <td>$94</td>
-            <td>20</td>
-            <td><button>Actualizar</button>
-                <button>Editar</button>
-
-            </td>
-        </tr>
-        <tr>
-            <td>IP003</td>
-             <td><img src="img/vinos.jpg" width="20%" height="20%"></td>
-            <td>vinos</td>
-            <td>$94</td>
-            <td>300</td>
-            <td><button>Actualizar</button>
-                <button>Editar</button>
-
-            </td>
-        </tr>
-        <tr>
-            <td>IP003</td>
-             <td><img src="img/Frtas-y-verduras.jpg" width="20%" height="20%"></td>
-            <td>frutas y verduras</td>
-            <td>$94</td>
-            <td>130</td>
-            <td><button>Actualizar</button>
-                <button>Editar</button>
-
-            </td>
-        </tr>
+        
     </table> 
 </body>
 </html>

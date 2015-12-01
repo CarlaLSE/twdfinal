@@ -44,7 +44,7 @@ String estatusprod = request.getParameter("estatusprod");
 String consulta =   "INSERT INTO twproducto (descripcion, existencia, precio, status) VALUES ('" + descripcionprod + "','" + existenciaprod + "','" + precioprod + "','" + estatusprod + "')";
 Conexiones.alta(consulta);
 out.println("<h2><center><br>Alta Registrada"); 
-out.println("<br><br><a href=Listar>Ver Productos</a><br><br>"); 
+out.println("<br><br><a href=Inventario.htm>Ver Productos</a><br><br>"); 
 out.println("<a href=AltaProductos2.jsp>Nuevo Producto</a><br><br>"); 
 } finally { 
 out.close(); 

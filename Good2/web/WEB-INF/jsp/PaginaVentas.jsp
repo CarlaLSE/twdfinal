@@ -45,7 +45,7 @@
             <ul class="hmenu">
                 <li><a href="#">Productos</a>
                     <ul class="sub-menu"> 
-                        <li><form method="get"><a href="" type="submit">Inventario</a></form></li>
+                        <li><form method="get"><a href="Inventario.htm" type="submit">Inventario</a></form></li>
                         <li><form method="get"><a href="AltaProductos.htm" type="submit">Alta de productos</a></form></li>
                     </ul>
                 </li>
@@ -62,7 +62,7 @@
                 <li><a href="#">Cliente</a>
                     <ul class="sub-menu"> 
 
-                        <li><form method="get"><a href="Mostrar_clientes.htm" type="submit">Consulta de cliente</a></form></li>
+                        <li><form method="get"><a href="ShowClient.htm" type="submit">Consulta de cliente</a></form></li>
 
                         <li><form method="get"><a href="AltaCliente.htm" type="submit">Alta de cliente</a></form></li>
 

@@ -25,6 +25,7 @@
                 <prop key="AltaProductos.htm">AltaProductosController</prop>
                 <prop key="Inventario.htm">InventarioController</prop>
                 <prop key="AltaCliente.htm">AltaClienteController</prop>
+                <prop key="ShowClient.htm">ShowClientController</prop>
             </props>
         </property>
     </bean>
@@ -57,4 +58,7 @@
     <bean name="AltaClienteController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="AltaCliente" />
+    <bean name="ShowClientController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="ShowClient" />
 </beans>
